@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<canvas id="myChart" width="100" height="100"></canvas>-->
+<div class="chart-container" style="position: relative; height:30vh; width:40vw">
+    <canvas id="myChart"></canvas>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js" integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+function getWeekLables(){
+    let week = ["周日", "周一", "周二", "周三", "周四", "周五", "周六"]
+    let today = new Date().getDay()
+    week = week.slice(today).concat(week.slice(0,today))
+    return week
+}
+// week = getWeekLables()
+// console.log(week)
+var ctx = document.getElementById('myChart').getContext('2d');
+var chart = new Chart(ctx, {
+    // 要创建的图表类型
+    type: 'line',
+
+    // 数据集
+    data: {
+        // labels: ["周日", "周一", "周二", "周三", "周四", "周五", "周六"],
+        labels: getWeekLables(),
+        datasets: [{
+            label: "过去七天的心情记录",
+            backgroundColor: 'rgb(255, 99, 132)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: [0, 10, 5, 2, 20, 30, 45],
+        }]
+    },
+
+    // 配置选项
+    options: {}
+});
+// var myLineChart = new Chart(ctx, {
+//     type: "line",
+//     data: data,
+//     options: options
+// });
+</script>
+</body>
+</html>

@@ -1,4 +1,4 @@
-package top.popko.demo;
+package top.myshiro.demo;
 
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.AuthenticationInfo;
@@ -23,7 +23,8 @@ public class MyRealm extends AuthorizingRealm {
 
     protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken token) throws AuthenticationException {
         String username = (String) token.getPrincipal();
-        if (!"admin".equals(username)) {
+//        if (!"admin".equals(username)) {
+        if (!"admin".equals(username)&&!"user1".equals(username)) {
             throw new UnknownAccountException("账户不存在!");
         } else {
             return new SimpleAuthenticationInfo(username, "123456", this.getName());

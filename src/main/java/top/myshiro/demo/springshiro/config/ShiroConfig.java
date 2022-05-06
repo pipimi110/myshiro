@@ -3,9 +3,12 @@
 // (powered by FernFlower decompiler)
 //
 
-package top.popko.demo.springshiro.config;
+package top.myshiro.demo.springshiro.config;
 
-import top.popko.demo.MyRealm;
+import org.apache.shiro.config.IniSecurityManagerFactory;
+import org.apache.shiro.util.Factory;
+import top.myshiro.demo.MyRealm;
+
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -33,6 +36,7 @@ public class ShiroConfig {
         manager.setRealm(this.myRealm());
         return manager;
     }
+
 
     @Bean
     ShiroFilterFactoryBean shiroFilterFactoryBean() {

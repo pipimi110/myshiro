@@ -1,11 +1,11 @@
-package top.popko.demo;
+package top.myshiro.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletComponentScan;
 
 @ServletComponentScan(
-    basePackages = {"top.popko.demo"}
+    basePackages = {"top.myshiro.demo"}
 )
 @SpringBootApplication
 public class SpringShiroApplication {

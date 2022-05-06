@@ -18,27 +18,36 @@
             <h3>
                 用户功能.
             </h3>
-            <ul class="breadcrumb">
-                <li>
-                    <a href="userIndex.html">个人主页</a> <span class="divider">/</span>
-                </li>
-                <li>
-                    <a href="userMood.html">心情日记</a> <span class="divider">/</span>
-                </li>
-                <li>
-                    <a href="userSay.html">树洞</a> <span class="divider">/</span>
-                </li>
-                <li>
-                    <a href="userQues.html">匿名提问</a> <span class="divider">/</span>
-                </li>
-                <li>
-                    <a href="userMailbox.html">信箱</a> <span class="divider">/</span>
-                </li>
-                <li class="active">
-                    ...
-                    <!--					主题-->
-                </li>
-            </ul>
+			<ul class="breadcrumb">
+				<li>
+<!--					<a href="userIndex.html">个人主页</a> <span class="divider">/</span>-->
+					<a href="userIndex">个人主页</a> <span class="divider">/</span>
+				</li>
+				<li>
+<!--					<a href="userMood.html">心情日记</a> <span class="divider">/</span>-->
+					<a href="userMood">心情日记</a> <span class="divider">/</span>
+				</li>
+				<li>
+<!--					<a href="userSay.html">树洞</a> <span class="divider">/</span>-->
+					<a href="userSay">树洞</a> <span class="divider">/</span>
+				</li>
+				<li>
+<!--					<a href="userQues.html">匿名提问</a> <span class="divider">/</span>-->
+					<a href="userQues">匿名提问</a> <span class="divider">/</span>
+				</li>
+				<li>
+<!--					<a href="userMailbox.html">信箱</a> <span class="divider">/</span>-->
+					<a href="userMailbox">信箱</a> <span class="divider">/</span>
+				</li>
+				<li>
+<!--					<a href="logout.html">信箱</a> <span class="divider">/</span>-->
+					<a href="logout">登出</a> <span class="divider">/</span>
+				</li>
+				<li class="active">
+					...
+<!--					主题-->
+				</li>
+			</ul>
             <!--			<img alt="140x140" src="public/img/1566572366714.png" />-->
             <!--		</div>-->
             <!--	</div>-->
@@ -86,6 +95,7 @@
             <!--			</div>-->
         </div>
     </div>
+	<div th:insert="~{public/html/table :: copy}"></div>
 </div>
 </body>
 </html>

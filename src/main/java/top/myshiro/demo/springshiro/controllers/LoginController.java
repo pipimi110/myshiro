@@ -3,7 +3,7 @@
 // (powered by FernFlower decompiler)
 //
 
-package top.popko.demo.springshiro.controllers;
+package top.myshiro.demo.springshiro.controllers;
 
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationException;
@@ -55,16 +55,16 @@ public class LoginController {
 
     }
 
-    @RequiresUser
+//    @RequiresUser
     @GetMapping({"/logout"})
     public String logout() {
         Subject subject = SecurityUtils.getSubject();
         try{
             subject.logout();
         }catch (Exception e){
-            e.printStackTrace();
+//            e.printStackTrace();
         }
-        return "please login!";
+        return "redirect:/login";
     }
 
     public static void main(String[] args) {

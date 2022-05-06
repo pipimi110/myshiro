@@ -20,19 +20,28 @@
 			</h3>
 			<ul class="breadcrumb">
 				<li>
-					<a href="userIndex.html">个人主页</a> <span class="divider">/</span>
+<!--					<a href="userIndex.html">个人主页</a> <span class="divider">/</span>-->
+					<a href="userIndex">个人主页</a> <span class="divider">/</span>
 				</li>
 				<li>
-					<a href="userMood.html">心情日记</a> <span class="divider">/</span>
+<!--					<a href="userMood.html">心情日记</a> <span class="divider">/</span>-->
+					<a href="userMood">心情日记</a> <span class="divider">/</span>
 				</li>
 				<li>
-					<a href="userSay.html">树洞</a> <span class="divider">/</span>
+<!--					<a href="userSay.html">树洞</a> <span class="divider">/</span>-->
+					<a href="userSay">树洞</a> <span class="divider">/</span>
 				</li>
 				<li>
-					<a href="userQues.html">匿名提问</a> <span class="divider">/</span>
+<!--					<a href="userQues.html">匿名提问</a> <span class="divider">/</span>-->
+					<a href="userQues">匿名提问</a> <span class="divider">/</span>
 				</li>
 				<li>
-					<a href="userMailbox.html">信箱</a> <span class="divider">/</span>
+<!--					<a href="userMailbox.html">信箱</a> <span class="divider">/</span>-->
+					<a href="userMailbox">信箱</a> <span class="divider">/</span>
+				</li>
+				<li>
+<!--					<a href="logout.html">信箱</a> <span class="divider">/</span>-->
+					<a href="logout">登出</a> <span class="divider">/</span>
 				</li>
 				<li class="active">
 					...
@@ -45,16 +54,16 @@
                 <fieldset>
                     <legend>个人主页</legend>
 					用户名:<br>
-					<input type="text" name="username" value="Popko">
+					<input type="text" name="username" value="Popko" th:value="${user.username}">
 					<br>
 					年龄:<br>
-					<input type="text" name="lastname" value="18">
+					<input type="text" name="age" value="18" th:value="${user.age}">
 					<br>
 					性别:<br>
-					<input type="text" name="lastname" value="Mouse">
+					<input type="text" name="sex" value="Male" th:value="${user.sex}">
 					<br>
 					兴趣:<br>
-					<input type="text" name="lastname" value="Mouse">
+					<input type="text" name="hobby" value="acg" th:value="${user.hobby}">
 					<br>
 
 <!--                    <label>想问些啥</label>-->

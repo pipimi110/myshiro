@@ -1,4 +1,4 @@
-package top.popko.demo;
+package top.myshiro.demo;
 
 import org.apache.shiro.authc.*;
 import org.apache.shiro.realm.Realm;
